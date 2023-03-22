@@ -49,6 +49,28 @@ p{
     text-indent: 50px;
 }
 
+section#conteudoPrincipal{
+    display: block;
+    text-decoration: underline;
+    width: 670px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+aside#conteudoSecundario{
+    display: block;
+    width: 450px;
+    float: right;
+    margin-right: 25px;
+    
+}
+footer#rodape{
+    clear: both;
+    border-top: 1px solid #606060;
+}
+footer#rodape p{
+    text-align: center;
+}
 /*Formatação de Foto com Legenda*/
 figure.legenda{
     position: relative;
