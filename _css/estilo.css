@@ -44,6 +44,20 @@ header#cabecalho h2{
     padding: 0px;
     margin-top: -5px;
 }
+/*Formatação da Tabela de Especificações*/
+table#especificacoes{
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+        
+}
+table#especificacoes td{
+    border: 1px solid #606060;
+     padding: 10px;
+    
+    
+}
 p{
     text-align: center;
     text-indent: 50px;
