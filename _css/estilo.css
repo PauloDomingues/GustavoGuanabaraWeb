@@ -19,7 +19,7 @@ div#interface{
 /*Icone flutuante*/
 header#cabecalho img#icone{
     position: absolute;
-    left: 1390px;
+    left: 1110px;
     top: 70px;
 }
 /*Cabeçalho*/
@@ -58,6 +58,35 @@ table#especificacoes td{
     
     
 }
+
+table#especificacoes td.coluna-esquerda{
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#especificacoes td.coluna-direita{
+    background-color: #cecece;
+}
+
+table#especificacoes caption{
+    color: #808080;
+    font-size: 13pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+
+}
+
+table#especificacoes caption span{
+    display: block;
+    float: right;
+    color: black;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
 p{
     text-align: center;
     text-indent: 50px;
@@ -65,11 +94,40 @@ p{
 
 section#conteudoPrincipal{
     display: block;
-    text-decoration: underline;
+    text-decoration: none;
     width: 670px;
     float: left;
     border-right: 1px solid #606060;
     padding-right: 15px;
+}
+
+article#noticiaPrincipal h2{
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 0px;
+    margin: 0px;
+
+
+}
+header#cabecalhoArtigo h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+
+}
+
+header#cabecalhoArtigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+header#cabecalhoArtigo h3{
+
+
 }
 aside#conteudoSecundario{
     display: block;
