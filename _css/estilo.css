@@ -172,9 +172,21 @@ header#cabecalhoArtigo h2{
 
 header#cabecalhoArtigo h3{
 
+}
+section#corpoFull h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
 
 }
-
+section#corpoFull h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+    margin-bottom: -5px;
+}
 aside#conteudoSecundario{
     background-color: #dddddd;
     padding: 13px;
