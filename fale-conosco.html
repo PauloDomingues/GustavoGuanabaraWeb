@@ -37,39 +37,44 @@
             <h2> Fale Conosco > Contato </h2>
             <h1> Formulário de Contato </h1>
             <h2> por Gustavo Guanabara </h2>
-            <h3> Atualizado em 01/Maio/2013 </h3>
+            <h3 class="direita"> Atualizado em 01/Maio/2013 </h3>
         </header>
-     <section id="faleConosco">
-        <section id="identificacaoUsuario">
-            <h1> Identificação do Usuário </h1>
-                Nome: <input type="text" name="nomeUsuario"><br>
-                Senha: <input type="password" name="senhaUsuario"><br>
-                E-mail: <input type="E-mail" name="emailUsuario"><br>
-                Sexo: <input type="checkbox" name="sexoUsuario"><br>
-                Masculino
-                Feminino
-                Data de Nascimento: <input type="Data" name="nascimentoUsuario">
-        </section>
-
-            <h1> Endereço </h1>
-                Logradouro:
-                Número:
-                Estado:
-                Cidade:
-
-            <h1> Mensagem </h1>
-            Grau de Urgência:
-            Mensagem:
-
-            <h1> Quero um Google Glass </h1>
-            Gostaria de adquirir um Google Glass quando disponível
-            Cor:
-            Quantidade:
-            Preço Total: R$
+            <form>
+                <fieldset id="usuario">
+                    <legend> Identificação do Usuário  </legend>
+                        <p><label for="cNome"> Nome: <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></label></p>
+                        <p><label for="cSenha"> Senha: <input type="password" name="tSenha" id="cSenha" placeholder="Digite uma Senha"/></label></p>
+                        <p><label for="cEmail"> E-mail: <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="Digite um Email"/></label></p>
+                <fieldset id="sexo">
+                    <legend> Sexo: </legend>
+                        <p> <input type="radio" name="tSexo" id="cMasc" checked/> <label for="cMasc">Masculino </label></p>
+                        <p> <input type="radio" name="tSexo" id="cFem"/> <label for="cFem"> Feminino </label></p>
+                </fieldset>
+                        <p> Data de Nascimento: <input type="date" name="tNasc" id="cNasc"/></p>
+                </fieldset>
+                <fieldset id="endereco">
+                    <legend> Endereço: </legend>
+                        <p><label for="cLog"> Lograd.: <input type="text" name="tLog" id="cLog" placeholder="Rua, Av., Trav."/></label></p>
+                        <p> Número: <input type="number" name="tNum" id="cNum" placeholder="Numero, Complemento"/></p>
+                        <p> Estado: <input type="text" name="tEst" id="cEst" min="0" max="9999" placeholder="Estado"/></p>
+                        <p> Cidade: <input type="text" name="tCid" id="cCid" placeholder="Cidade"/></p>
+                </fieldset>
+                <fieldset id="mensagem">
+                    <legend> Mensagem </legend>
+                        <p> Grau de Urgência: </p>
+                        <p> Mensagem: </p>
+                </fieldset>
+                <fieldset id="pedido">
+                    <legend> Quero um Google Glass </legend>
+                        <p> Gostaria de adquirir um Google Glass quando disponível </p>
+                        <p> Cor: </p>
+                        <p> Quantidade: </p>
+                        <p> Preço Total: R$ </p>
+                </fieldset>
 
 
                                 [BOTÃO ENVIAR]
-    </section>
+            </form>
     <footer id="rodape">
         <p>Copyright 2013 - by Gustavo Guanabara <br>
         <a href="#"> Facebook </a> | <a href="#"> Twitter </a></p>
