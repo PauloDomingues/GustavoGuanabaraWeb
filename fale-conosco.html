@@ -13,6 +13,7 @@
     <meta charset="utf-8">
     <title> Fale Conosco </title>
     <link rel="stylesheet" a href="_css/estilo.css"/>
+    <link rel="stylesheet" href="_css/form.css"/>
     <script src="_javascript/funcoes.js"></script>
 </head>
 <body>
@@ -39,7 +40,7 @@
             <h2> por Gustavo Guanabara </h2>
             <h3 class="direita"> Atualizado em 01/Maio/2013 </h3>
         </header>
-            <form>
+            <form method="post" id="fContato">
                 <fieldset id="usuario">
                     <legend> Identificação do Usuário  </legend>
                         <p><label for="cNome"> Nome: <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></label></p>
@@ -56,13 +57,35 @@
                     <legend> Endereço: </legend>
                         <p><label for="cLog"> Lograd.: <input type="text" name="tLog" id="cLog" placeholder="Rua, Av., Trav."/></label></p>
                         <p> Número: <input type="number" name="tNum" id="cNum" placeholder="Numero, Complemento"/></p>
-                        <p> Estado: <input type="text" name="tEst" id="cEst" min="0" max="9999" placeholder="Estado"/></p>
-                        <p> Cidade: <input type="text" name="tCid" id="cCid" placeholder="Cidade"/></p>
+                        <p> Estado:
+                            <select name="tEst" id="cEst">
+                            <optgroup label="Região Sudeste">
+                                <option value="RJ"> Rio de Janeiro </option>
+                                <option value="SP" selected> São Paulo </option>
+                                <option value="MG"> Minas Gerais </option>
+                                <option value="ES"> Espírito Santo </option>
+                            </optgroup>
+                            <optgroup label="Região Sul">
+                                <option value="PR"> Paraná </option>
+                                <option value="SC"> Santa Catarina </option>
+                                <option value="RS"> Rio Grande do Sul </option>
+                            </optgroup>
+                            </select>
+                        </p>
+                        <p> Cidade: <input type="text" name="tCid" id="cCid" placeholder="Cidade" list="cidades"/></p>
+                            <datalist id="cidades">
+                                <option value="São Paulo"></option>
+                                <option value="Guarulhos"></option>
+                                <option value="Itaquaquecetuba"></option>
+                                <option value="Osasco"></option>                                
+                            </datalist>
                 </fieldset>
                 <fieldset id="mensagem">
-                    <legend> Mensagem </legend>
-                        <p> Grau de Urgência: </p>
-                        <p> Mensagem: </p>
+                    <legend> Mensagem do Usuário </legend>
+                        <p><label for="cUrg"> Grau de Urgência: 
+                        Min <input type="range" name="tMen" id="cUrg" min="0" max="10"/>Máx </label></p>
+                        <p> <label for="cMens"cows="3" rols="9" placeholder="Deixe aqui sua mensagem"> Mensagem: </label>
+                        <textarea name="tMens" id="cMens"></textarea>
                 </fieldset>
                 <fieldset id="pedido">
                     <legend> Quero um Google Glass </legend>
