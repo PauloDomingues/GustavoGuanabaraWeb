@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
-<head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
     <title> Fale Conosco </title>
     <link rel="stylesheet" a href="_css/estilo.css"/>
     <link rel="stylesheet" href="_css/form.css"/>
     <script src="_javascript/funcoes.js"></script>
+    <script>
+        function calcTotal(){
+            var quantidade = parseInt(document.getElementById('cQuan').value);
+            total = quantidade * 1500;
+            document.getElementById('cPrec').value = total;
+        }
+    </script>
 </head>
 <body>
     <div id="interface">
@@ -40,18 +38,19 @@
             <h2> por Gustavo Guanabara </h2>
             <h3 class="direita"> Atualizado em 01/Maio/2013 </h3>
         </header>
-            <form method="post" id="fContato">
+            <form method="post" id="fContato" oninput="calcTotal();">
                 <fieldset id="usuario">
                     <legend> Identificação do Usuário  </legend>
                         <p><label for="cNome"> Nome: <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></label></p>
                         <p><label for="cSenha"> Senha: <input type="password" name="tSenha" id="cSenha" placeholder="Digite uma Senha"/></label></p>
                         <p><label for="cEmail"> E-mail: <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="Digite um Email"/></label></p>
-                <fieldset id="sexo">
+                 <fieldset id="sexo">
                     <legend> Sexo: </legend>
-                        <p> <input type="radio" name="tSexo" id="cMasc" checked/> <label for="cMasc">Masculino </label></p>
-                        <p> <input type="radio" name="tSexo" id="cFem"/> <label for="cFem"> Feminino </label></p>
-                </fieldset>
+                         <input type="radio" name="tSexo" id="cMasc" checked/> <label for="cMasc">Masculino </label>   <br>
+                         <input type="radio" name="tSexo" id="cFem"/> <label for="cFem"> Feminino </label></fieldset>
                         <p> Data de Nascimento: <input type="date" name="tNasc" id="cNasc"/></p>
+                </fieldset>
+                        
                 </fieldset>
                 <fieldset id="endereco">
                     <legend> Endereço: </legend>
@@ -84,19 +83,21 @@
                     <legend> Mensagem do Usuário </legend>
                         <p><label for="cUrg"> Grau de Urgência: 
                         Min <input type="range" name="tMen" id="cUrg" min="0" max="10"/>Máx </label></p>
-                        <p> <label for="cMens"cows="3" rols="9" placeholder="Deixe aqui sua mensagem"> Mensagem: </label>
-                        <textarea name="tMens" id="cMens"></textarea>
+                        <p> <label for="cMens"cows="55" rols="5"> Mensagem: </label>
+                        <textarea name="tMens" id="cMens" cols="35" rols="9" placeholder="Deixe aqui sua mensagem"></textarea>
                 </fieldset>
                 <fieldset id="pedido">
                     <legend> Quero um Google Glass </legend>
-                        <p> Gostaria de adquirir um Google Glass quando disponível </p>
-                        <p> Cor: </p>
-                        <p> Quantidade: </p>
-                        <p> Preço Total: R$ </p>
+                        <input type="checkbox" name="tPed" id="cPed" checked/>
+                        <label for="cPed"> Gostaria de adquirir um Google Glass quando disponível </label><br><br>
+                        <label for="cCor"> Cor: </label>
+                        <input type="color" name="tCor" id="cCor" value="#000000"/><br><br>
+                        <label for="cQuan"> Quantidade:</label> 
+                        <input type="number" name="tQuan" id="cQuan" min="0" max="5"/> <br><br>
+                        <label for="cPrec"> Preço Total: R$ </label>
+                        <input type="text" name="tPrec" id="cPrec" placeholder="Preço total a Pagar" readonly/>
                 </fieldset>
-
-
-                                [BOTÃO ENVIAR]
+                <input type="image" class="botaoEnviar" name="tEnviar" src="_imagens/botao-enviar.png"/>                        
             </form>
     <footer id="rodape">
         <p>Copyright 2013 - by Gustavo Guanabara <br>
