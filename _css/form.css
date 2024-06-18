@@ -50,5 +50,7 @@ fieldset#pedido{
 }
 
 .botaoEnviar{
-	margin-left: 170px;
+	margin-left: 195px;
+	padding: 10px;
+	margin-bottom: 20px;
 }
