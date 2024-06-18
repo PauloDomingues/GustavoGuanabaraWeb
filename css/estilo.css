@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 @font-face {
     font-family: 'FonteLogo';
-    src: url("./_fonts/Sweet\ Smile.otf");
+    src: url(".././fonts/Sweet\ Smile.otf");
 }
 body{
     background-color: #cecece;
